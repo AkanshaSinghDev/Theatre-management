@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>VIT Cinema</title>
+	<link rel=icon href="images/favicon.ico">
+	<meta name='viewport' content="width=device-width, height=device-height, initial-scale=1">
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Website CSS style -->
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+		<!-- Website Font style -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		input{
+			height: 30px;
+			width: initial;
+		}
+		td{
+			width: 200px;
+		}
+		table{
+			margin-left: 50px;
+		}
+		
+		.button {
+    background-color: #4CAF50;
+    border: 1px;
+    color: white;
+    padding: 15px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	align:center;
+	border-radius:5px;
+}
+	#login {
+    padding-top: 50px
+}
+#login .form-wrap {
+    width: 30%;
+    margin: 0 auto;
+}
+#login h1 {
+    color: #1fa67b;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+#login .form-group {
+    margin-bottom: 5px;
+}
+#login .checkbox {
+    margin-bottom: 20px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+#login .checkbox.show:before {
+    content: '\e013';
+    color: #1fa67b;
+    font-size: 17px;
+    margin: 1px 0 0 3px;
+    position: absolute;
+    pointer-events: none;
+    font-family: 'Glyphicons Halflings';
+}
+#login .checkbox .character-checkbox {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    display: inline-block;
+}
+#login .checkbox .label {
+    color: #6d6d6d;
+    font-size: 13px;
+    font-weight: normal;
+}
+#login .btn.btn-custom {
+    font-size: 14px;
+	margin-bottom: 20px;
+}
+#login .forget {
+    font-size: 13px;
+	text-align: center;
+	display: block;
+}
+
+/*    --------------------------------------------------
+	:: Inputs & Buttons
+	-------------------------------------------------- */
+.form-control {
+    color: #212121;
+}
+.btn-custom {
+    color: #fff;
+	background-color: #1fa67b;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+    color: #fff;
+}	
+
+.main{
+ 	margin-top: 70px;
+}
+
+h1.title { 
+	font-size: 50px;
+	font-family: 'Passion One', cursive; 
+	font-weight: 400; 
+}
+
+hr{
+	width: 10%;
+	color: #fff;
+}
+
+.form-group{
+	margin-bottom: 10px;
+}
+
+label{
+	margin-bottom: 10px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 1px;
+}
+
+.main-login{
+ 	background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.main-center{
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 330px;
+    padding: 40px 40px;
+
+}
+
+.login-button{
+	margin-top: 5px;
+}
+
+.login-register{
+	font-size: 11px;
+	text-align: center;
+}
+	</style>
+	
+		<script type="text/javascript">
+			function validate(){
+				var p1=document.f1.psw1.value;
+				var p2=document.f1.psw2.value;
+				var name = document.f1.name.value;
+				var t=0;
+				if (name.length==0||p1.length==0||p2.length==0){  
+				  alert("Name or Password can't be Blank!");  
+				  return false;				  
+				} else
+						t++;
+
+				if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(f1.email.value))  
+				  {  
+					t++; 
+				  }else{  
+					alert("You have Entered an Invalid Email Address!");
+					return (false);
+				  }
+				  
+				  if (/^\d{10}$/.test(f1.num.value))  
+				  {  
+					t++;  
+				  }else{  
+					alert("You have Entered an Invalid Phone Number!!");
+					return (false);
+				  }
+				  
+				if(p1==p2){
+					t++;
+				}
+				else{
+					alert("Password must be Same!\n Try Again!");
+					return false;
+				}
+				if(t==4)
+					return true;
+			}
+		</script>
+	
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<h3>VIT <strong>Cinema</strong></h3>
+			<ul class="nav nav-tabs">
+			  <li role="presentation" class="active"><a href="index.php">Home</a></li>
+			  <li role="presentation" class="active"><a href="review.php" target="_blank">Reviews</a></li>
+			  <li role="presentation" class="active"><a href="account.php">Account</a></li>
+			  <li role="presentation" class="active"><a href="login.php" style="background: #f75b10; color: white;">Login</a></li>
+			  </a></li>
+			</ul>
+		</div>
+	
+		<div id="expand">
+		<form method="POST" action="saveuser.php" name="f1" onsubmit="return validate()">
+		<section id="login">
+		<div class="container">
+    	<div class="row">
+    	    <div class="col-xs-12">
+        	    <div class="form-wrap">
+                <h1>Registration Panal</h1>
+                    <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
+                        	<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Your Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="name" name="name" id="name" class="form-control" placeholder="Enter Name">
+                        </div></div></div>
+						
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com">
+                       </div></div></div>
+							<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">DOB</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-birthday-cake" aria-hidden="true"></i></span>
+                            <input type="date" name="dob" id="dob" class="form-control" >
+                        </div></div></div>
+                        <div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" name="psw1" id="psw1" class="form-control" placeholder="Password">
+                       </div></div></div>
+						 <div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Confirm Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" name="psw2" id="psw2" class="form-control" placeholder="Confirm Password">
+                       </div></div></div>
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Contact Number</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                            <input type="number" name="num" id="num" class="form-control" placeholder="Contact Number">
+                        </div></div></div>
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Gender</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-venus" aria-hidden="true"></i></span>&nbsp &nbsp
+							<input type="radio" name="gender" id="male" value="male">
+							<label for="male">Male</label>
+							<input type="radio" name="gender" id="female" value="female">
+							<label for="female">Female</label>
+                       </div></div></div>
+		
+						<input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block"  name="register" value="Register"/>
+		
+			
+			      Already Registered? <a href="login.php">Login Here</a></td>
+			</div></div></div></div></section>
+		</form>
+		</form>
+		<br><br>
+		</div>
+		</div>
+		<div id="foot">
+			<img src="images/favicon.ico" style="height: 25px;">
+			<h4 style="margin-left: 10px;">VIT <strong>Cinema 2k17</strong></h4>
+			<div id="footer">
+				<img src="images/youtube.png">
+				<h6>YouTube</h6>
+				<img src="images/twitter.png">
+				<h6>Twitter</h6>
+				<img src="images/facebook.png">
+				<h6>Facebook</h6>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src=script.js></script>
+</body>
+</html>
